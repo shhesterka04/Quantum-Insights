@@ -8,7 +8,7 @@ def search_oracle(qc, address_qubits, target_qubits, target_value):
         if value == '0':
             qc.x(target_qubits[idx])
 
-    qc.mct(target_qubits, address_qubits[-1], address_qubits[:-1], mode='basic')
+    qc.mct(target_qubits, address_qubits[-1], address_qubits[:-1], mode='basic') 
     
     for idx, value in enumerate(target_value):
         if value == '0':

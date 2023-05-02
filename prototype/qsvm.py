@@ -14,7 +14,7 @@ training_dataset, test_dataset, datapoints, class_labels = ad_hoc_data(
 # Set up the feature map and the QSVM algorithm
 feature_map = ZZFeatureMap(feature_dimension=2, reps=2, entanglement="linear")
 backend = Aer.get_backend("aer_simulator_statevector")
-quantum_instance = QuantumInstance(backend, shots=1024, seed_simulator=42, seed_transpiler=42)
+quantum_instance = QuantumInstance(backend, shots=1024, seed_simulator=42, seed_transpiler=42) 
 
 qsvm = QSVM(feature_map, training_dataset, test_dataset, None, quantum_instance)
 

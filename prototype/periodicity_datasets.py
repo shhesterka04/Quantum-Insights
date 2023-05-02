@@ -7,7 +7,7 @@ def example_periodic_function(x):
     return (x % 3) + 1
 
 def periodicity_oracle(qc, x_qubits, p_qubits, ancilla_qubits):
-    # Custom oracle implementation for the example periodic function
+    # Custom oracle implementation for the example periodic function 
     for i in range(len(x_qubits)):
         qc.cx(x_qubits[i], ancilla_qubits[i])
         qc.cx(p_qubits[i], ancilla_qubits[i])

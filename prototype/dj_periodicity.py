@@ -8,7 +8,7 @@ def periodicity_oracle(n, f):
         oracle.cx(i, n+i)
     
     for i in range(n):
-        oracle.cx(n+i, 2*n)
+        oracle.cx(n+i, 2*n) 
     
     U_f = oracle.to_gate()
     U_f.name = "U_f"
