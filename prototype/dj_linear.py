@@ -4,7 +4,7 @@ from qiskit.visualization import plot_histogram
 def dj_oracle_linear(n, f):
     oracle = QuantumCircuit(n+1)
 
-    for i in range(n):
+    for i in range(n): 
         oracle.cx(i, n)
 
     U_f = oracle.to_gate()

@@ -11,7 +11,7 @@ def monotonicity_oracle(qc, n, monotonic=True):
         qc.mct(list(range(n, 2*n-1)), 2*n-1)
         qc.barrier()
         for i in range(n-1):
-            qc.x(n+i)
+            qc.x(n+i) 
             qc.cx(i, n+i)
     else:
         # An example of a non-monotonic function using a CNOT gate
